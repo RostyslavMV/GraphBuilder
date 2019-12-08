@@ -6,10 +6,29 @@
         xmlns:d3="clr-namespace:InteractiveDataDisplay.WPF;assembly=InteractiveDataDisplay.WPF"
         xmlns:local="clr-namespace:GraphBuilder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="LayoutRoot" Background="White">
-        <d3:Chart BottomTitle="Argument" LeftTitle="Function">
-            <d3:LineGraph x:Name="linegraph" Description="Simple linegraph" Stroke="Blue" StrokeThickness="3"/>
-        </d3:Chart>
+        Title="MainWindow" Height="100" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Function: " Grid.Row="1"/>
+        <TextBox x:Name="fnc" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Text=" X0: " Grid.Row="1" Grid.Column="2"/>
+        <TextBox x:Name="x0" Grid.Column="3" Grid.Row="1" />
+        <TextBlock Text=" X1: " Grid.Row="1" Grid.Column="4"/>
+        <TextBox x:Name="x1" Grid.Column="5" Grid.Row="1" />
+        <Button x:Name="ViewGraphButton" Margin="2 0" Content="View graph" Grid.Row="1" Grid.Column="6" Padding="5,1" Click="ViewGraphButton_Click" />
     </Grid>
 </Window>
