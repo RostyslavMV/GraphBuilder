@@ -30,6 +30,6 @@
         <TextBlock Text=" X1: " Grid.Row="1" Grid.Column="4"/>
         <TextBox x:Name="x1" Grid.Column="5" Grid.Row="1" />
         <Button x:Name="ViewGraphButton" Margin="2 0" Content="View graph" Grid.Row="1" Grid.Column="6" Padding="5,1" Click="ViewGraphButton_Click" />
-        <TextBlock Padding="0 4"  Grid.Row="2" x:Name="ExceptionMessage" Text="Exception" />
+        <TextBlock Padding="0 4"  Grid.Row="2" x:Name="ExceptionMessage" />
     </Grid>
 </Window>

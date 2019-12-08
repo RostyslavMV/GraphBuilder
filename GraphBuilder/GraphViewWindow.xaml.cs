@@ -24,7 +24,6 @@ namespace GraphBuilder
         {
 
             InitializeComponent();
-            Plot();
         }
 
         Dictionary<string,string> convertExpressions = new Dictionary<string, string>();
@@ -38,6 +37,7 @@ namespace GraphBuilder
         {
             this.x = x;
             this.y = y;
+            Plot();
         }
     }
 }

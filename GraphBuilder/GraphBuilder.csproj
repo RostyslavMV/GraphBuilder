@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calc.dll" />
+    <Content Include="Calc.js" />
     <Content Include="InteractiveDataDisplay.WPF.dll" />
     <Content Include="System.Reactive.dll" />
   </ItemGroup>
