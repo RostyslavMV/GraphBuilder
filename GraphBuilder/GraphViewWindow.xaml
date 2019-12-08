@@ -11,7 +11,7 @@
         Title="Window1" Height="450" Width="800">
     <Grid x:Name="LayoutRoot" Background="White">
         <d3:Chart BottomTitle="Argument" LeftTitle="Function">
-            <d3:LineGraph x:Name="linegraph" Description="Simple linegraph" Stroke="Blue" StrokeThickness="3"/>
+            <d3:LineGraph x:Name="linegraph" Description="" Stroke="Blue" StrokeThickness="3"/>
         </d3:Chart>
     </Grid>
 </Window>
