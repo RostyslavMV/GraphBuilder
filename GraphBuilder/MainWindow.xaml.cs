@@ -71,6 +71,7 @@ namespace GraphBuilder
                 if (y != null)
                 {
                     var newGraphWindow = new GraphViewWindow();
+                    newGraphWindow.Title = fnc.Text;
                     newGraphWindow.SetParameters(x, y);
                     newGraphWindow.Show();
                 }

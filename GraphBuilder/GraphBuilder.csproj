@@ -113,6 +113,7 @@
     <Content Include="Calc.dll" />
     <Content Include="Calc.js" />
     <Content Include="InteractiveDataDisplay.WPF.dll" />
+    <Resource Include="Logo\graph.ico" />
     <Content Include="System.Reactive.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
