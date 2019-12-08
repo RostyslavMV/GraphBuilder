@@ -29,10 +29,10 @@ namespace GraphBuilder
 
         private void CalculateX(string x0, string x1)
         {
-            int X0, X1;
-            if (Int32.TryParse(x0, out X0) && Int32.TryParse(x1, out X1) && X1 > X0)
+            double X0, X1;
+            if (Double.TryParse(x0, out X0) && Double.TryParse(x1, out X1) && X1 > X0)
             {
-                x = Enumerable.Range(X0, (X1-X0)*100 + 1).Select(i => i / 100.0).ToArray();
+                x = Enumerable.Range(0, 1001).Select(i => X0 + (X1 - X0) / 1000 * i).ToArray();
             }
             else ExceptionMessage.Text = "Please, enter correct X0 and X1";
         }
