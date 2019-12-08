@@ -65,12 +65,15 @@ namespace GraphBuilder
         private void ViewGraphButton_Click(object sender, RoutedEventArgs e)
         {
             CalculateX(x0.Text, x1.Text);
-            CalculateY(ConvertFunctionFormat(fnc.Text));
-            if (x != null && y != null)
+            if (x != null)
             {
-                var newGraphWindow = new GraphViewWindow();
-                newGraphWindow.SetParameters(x, y);
-                newGraphWindow.Show();
+                CalculateY(ConvertFunctionFormat(fnc.Text));
+                if (y != null)
+                {
+                    var newGraphWindow = new GraphViewWindow();
+                    newGraphWindow.SetParameters(x, y);
+                    newGraphWindow.Show();
+                }
             }
         }
     }
