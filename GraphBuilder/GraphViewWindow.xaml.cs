@@ -13,11 +13,13 @@ namespace GraphBuilder
     public partial class GraphViewWindow : Window
     {
         #region Private Propetries
-        private string Function { get; set;
-             private string X1 { get; set; }
-        private string X2 { get; set; }
+
+        private double[] x { get; set; }
+
+        private double[] y { get; set; }
 
         #endregion
+
         public GraphViewWindow()
         {
 
@@ -29,27 +31,13 @@ namespace GraphBuilder
 
         private void Plot()
         {
-            var x = Enumerable.Range(0, 1001).Select(i => i / 10.0).ToArray();
-            Evaluator evaluator = new Evaluator();
-            //double result = evaluator.Eval("Math.sin(0.5)");
-            double result1 = evaluator.EvalFunc("Math.sin(x)", 0.5);
-            try
-            {
-                var y = x.Select(v => evaluator.EvalFunc("Math.sin(x)*Math.cos(x)*x+x", v)).ToArray();
-                linegraph.Plot(x, y);
-            }
-            catch (Exception ex)
-            {
-
-            }
-
+            linegraph.Plot(x, y);
         }
 
-        public void getParameters(string Function, string X1, string X2)
+        public void SetParameters(double[] x, double[] y)
         {
-            this.Function = Function;
-            this.X1 = X1;
-            this.X2 = X2;
+            this.x = x;
+            this.y = y;
         }
     }
 }
