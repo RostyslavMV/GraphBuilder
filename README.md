@@ -24,3 +24,9 @@ and well optimized. To install this library, you just nedd to put dlls in your p
 easilly find sample projects, so it is easy to understand what do you have to write in code. I can't say that there is something bad in
 this library, everything was fine. I belive, that for this moment, there is nothing to redo/refactor, but in the future, when
 adding new functionality, maybe it will be better to put everything into folders and so on.
+
+
+
+Example of usage:
+
+![Example of usage](https://github.com/RostyslavMV/GraphBuilder/blob/master/example.PNG)
