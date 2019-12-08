@@ -32,7 +32,7 @@ namespace GraphBuilder
             int X0, X1;
             if (Int32.TryParse(x0, out X0) && Int32.TryParse(x1, out X1) && X1 > X0)
             {
-                x = Enumerable.Range(X0, X1*10 + 1).Select(i => i / 10.0).ToArray();
+                x = Enumerable.Range(X0, (X1-X0)*100 + 1).Select(i => i / 100.0).ToArray();
             }
             else ExceptionMessage.Text = "Please, enter correct X0 and X1";
         }
@@ -70,9 +70,10 @@ namespace GraphBuilder
                 CalculateY(ConvertFunctionFormat(fnc.Text));
                 if (y != null)
                 {
+                    ExceptionMessage.Text = "";
                     var newGraphWindow = new GraphViewWindow();
                     newGraphWindow.Title = "y(x)="+fnc.Text;
-                    newGraphWindow.linegraph.Description = "y(x)=" + fnc.Text;
+                    newGraphWindow.linegraph.Description = "y(x)="+fnc.Text;
                     newGraphWindow.SetParameters(x, y);
                     newGraphWindow.Show();
                 }
